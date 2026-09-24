@@ -59,7 +59,7 @@ public class KartyaPakli {
             }
         }
     
-    private void feltolt(){
+    private Lap[] feltolt(){
         String[] ertek ={"asz","kir","fel","x","Ix","VIII"};   
         String[] szin ={"T","Z","P","O"}; 
         int number=0;
@@ -68,7 +68,9 @@ public class KartyaPakli {
                 Lap ujlap=new Lap(ertekek,szinek);
                 if(number<21){pakli[++number]=ujlap;}
             }
+            
         }
+        return pakli;
     }
     
     public static void ezVolt(){
