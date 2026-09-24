@@ -26,6 +26,7 @@ public class Prog {
             for (int j = 0; j < 3; j++) {
                 System.out.print(KartyaPakli.pakli[szamlalo].getSzin()+KartyaPakli.pakli[szamlalo].getErtek()+"  |  ");
                 szamlalo++;
+                
             }
             System.out.println("");
         }

@@ -2,7 +2,7 @@ package keveres;
     
 public class KartyaPakli {
 
-    static Lap[] pakli=new Lap[22];
+    static Lap[] pakli=new Lap[21];
     public KartyaPakli() {
         feltolt();
     }
@@ -24,40 +24,29 @@ public class KartyaPakli {
     }
 
     private void kev1() {
-        for (int i = 1; i < 8; i++) {
-                    pakli[i]=pakli[(19-(i-1)*3)];
-                }
-                for (int i = 1; i < 8; i++) {
-                    pakli[i+7]=pakli[(20-(i-7)*3)];
-                }
-                for (int i = 1; i < 8; i++) {
-                pakli[i+14]=pakli[(21-(i-14)*3)];
+        for (int i = 0; i < 7; i++) {
+                pakli[i]=pakli[(20-(i-1)*3)];
+                pakli[i+7]=pakli[(19-(i-1)*3)];
+                pakli[i+14]=pakli[(21-(i-1)*3)];
                 }
     }
 
     private void kev2() {
-        for (int i = 1; i < 8; i++) {
-            pakli[i]=pakli[(20-(i-1)*3)];
-            }
-        for (int i = 1; i < 8; i++) {
-            pakli[i+7]=pakli[(21-(i-7)*3)];
-            }
-        for (int i = 1; i < 8; i++) {
-            pakli[i+14]=pakli[(19-(i-14)*3)];
+        for (int i = 0; i < 7; i++) {
+            pakli[i]=pakli[(19-(i-1)*3)];
+            pakli[i+7]=pakli[(20-(i-1)*3)];
+            pakli[i+14]=pakli[(21-(i-1)*3)];
             }
     }
 
     private void kev3() {
-        for (int i = 1; i < 8; i++) {
-            pakli[i]=pakli[(21-(i-1)*3)];
-            }
-        for (int i = 1; i < 8; i++) {
-            pakli[i+7]=pakli[(19-(i-7)*3)];
-            }
-        for (int i = 1; i < 8; i++) {
-            pakli[i+14]=pakli[(20-(i-14)*3)];
-            }
+        for (int i = 0; i < 7; i++) {
+            pakli[i]=pakli[(20-(i-1)*3)];
+            pakli[i+7]=pakli[(21-(i-1)*3)];
+            pakli[i+14]=pakli[(19-(i-1)*3)];
+            
         }
+    }
     
 
     public Lap[] feltolt(){
@@ -67,7 +56,7 @@ public class KartyaPakli {
         for (String szinek:szin){
             for(String ertekek:ertek){
                 Lap ujlap=new Lap(ertekek,szinek);
-                if(number<21){pakli[++number]=ujlap;}
+                if(number<21){pakli[number++]=ujlap;}
             }
             
         }
