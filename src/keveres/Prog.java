@@ -9,7 +9,7 @@ public class Prog {
         kirak();
         melyik();
     }
-
+ 
     private static void kirak() {
         int szamlalo=0;
         for (int i = 1; i < 4; i++) {
