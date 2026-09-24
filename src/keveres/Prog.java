@@ -24,7 +24,10 @@ public class Prog {
         System.out.println("");
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 3; j++) {
-                System.out.print(KartyaPakli.pakli[szamlalo].getSzin()+KartyaPakli.pakli[szamlalo].getErtek()+"  |  ");
+                if(szamlalo<=21){
+                    System.out.print(KartyaPakli.pakli[szamlalo].getSzin()+KartyaPakli.pakli[szamlalo].getErtek()+"  |  ");
+                }
+                
                 szamlalo++;
                 
             }

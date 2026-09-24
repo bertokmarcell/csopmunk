@@ -24,26 +24,27 @@ public class KartyaPakli {
     }
 
     private void kev1() {
-        for (int i = 0; i < 7; i++) {
-                pakli[i]=pakli[(20-(i-1)*3)];
-                pakli[i+7]=pakli[(19-(i-1)*3)];
-                pakli[i+14]=pakli[(21-(i-1)*3)];
+                for (int i = 2; i < 7; i++) {              
+                pakli[i]=pakli[(20-(i-1)*3)+2];
+                pakli[i+7]=pakli[(19-(i-1)*3)+2];
+                pakli[i+14]=pakli[(21-(i-1)*3)+2];
                 }
+        
     }
 
     private void kev2() {
-        for (int i = 0; i < 7; i++) {
-            pakli[i]=pakli[(19-(i-1)*3)];
-            pakli[i+7]=pakli[(20-(i-1)*3)];
-            pakli[i+14]=pakli[(21-(i-1)*3)];
+        for (int i = 2; i < 7; i++) {
+            pakli[i]=pakli[(19-(i-1)*3)+2];
+            pakli[i+7]=pakli[(20-(i-1)*3)+2];
+            pakli[i+14]=pakli[(21-(i-1)*3)+2];
             }
     }
 
     private void kev3() {
-        for (int i = 0; i < 7; i++) {
-            pakli[i]=pakli[(20-(i-1)*3)];
-            pakli[i+7]=pakli[(21-(i-1)*3)];
-            pakli[i+14]=pakli[(19-(i-1)*3)];
+        for (int i = 2; i < 7; i++) {
+            pakli[i]=pakli[(20-(i-1)*3)+2];
+            pakli[i+7]=pakli[(21-(i-1)*3)+2];
+            pakli[i+14]=pakli[(19-(i-1)*3)+2];
             
         }
     }
