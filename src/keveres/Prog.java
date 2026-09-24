@@ -6,8 +6,14 @@ import java.util.Scanner;
 public class Prog {
     static Scanner src = new Scanner(System.in);
     public static void main(String[] args) {
-        kirak();
-        melyik();
+        KartyaPakli pakli = new KartyaPakli();
+        pakli.feltolt();
+        for (int i = 0; i < 3; i++) {
+            kirak();
+            int tipp = melyik();;
+            pakli.keveres(tipp);
+        }
+        pakli.ezVolt(); 
     }
  
     private static void kirak() {
