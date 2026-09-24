@@ -1,10 +1,10 @@
 
 package keveres;
     
-public class Lapt {
+public class Lap {
     private String ertek;
     private String szin;
-    public Lapt(String ertek,String szin) {
+    public Lap(String ertek,String szin) {
         this.ertek=ertek;
         this.szin=szin;
     }
