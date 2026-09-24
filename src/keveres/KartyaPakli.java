@@ -54,7 +54,18 @@ public class KartyaPakli {
             pakli[i+14]=pakli[(20-(i-14)*3)];
             }
         }
-    private void kev1()
+    
+    private void feltolt(){
+        String[] ertek ={"asz","kir","fel","x","Ix","VIII"};   
+        String[] szin ={"T","Z","P","O"}; 
+        int number=0;
+        for (String szinek:szin){
+            for(String ertekek:ertek){
+                Lapt ujlap=new Lapt(ertekek,szinek);
+                if(number<21){pakli[++number]=ujlap;}
+            }
+        }
+    }
     
     
 }
