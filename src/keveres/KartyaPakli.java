@@ -59,7 +59,7 @@ public class KartyaPakli {
             }
         }
     
-    private void feltolt(){
+    public void feltolt(){
         String[] ertek ={"asz","kir","fel","x","Ix","VIII"};   
         String[] szin ={"T","Z","P","O"}; 
         int number=0;
@@ -71,7 +71,7 @@ public class KartyaPakli {
         }
     }
     
-    public static void ezVolt(){
+    public void ezVolt(){
         System.out.println("A " + pakli[11] + " lapott válsztottad");
     }
     
