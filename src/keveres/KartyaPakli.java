@@ -2,9 +2,13 @@ package keveres;
     
 public class KartyaPakli {
 
-    static Lapt[] pakli=new Lapt[22];
+    static Lap[] pakli=new Lap[22];
     public KartyaPakli() {
-        
+        feltolt();
+    }
+
+    public static Lap[] getPakli() {
+        return pakli;
     }
 
     public void keveres(int szam) {
@@ -61,11 +65,14 @@ public class KartyaPakli {
         int number=0;
         for (String szinek:szin){
             for(String ertekek:ertek){
-                Lapt ujlap=new Lapt(ertekek,szinek);
+                Lap ujlap=new Lap(ertekek,szinek);
                 if(number<21){pakli[++number]=ujlap;}
             }
         }
     }
     
+    public static void ezVolt(){
+        System.out.println("A " + pakli[11] + " lapott válsztottad");
+    }
     
 }
