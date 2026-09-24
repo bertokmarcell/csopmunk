@@ -24,35 +24,37 @@ public class KartyaPakli {
     }
 
     private void kev1() {
-                for (int i = 2; i < 7; i++) {              
-                pakli[i]=pakli[(20-(i-1)*3)+2];
-                pakli[i+7]=pakli[(19-(i-1)*3)+2];
-                pakli[i+14]=pakli[(21-(i-1)*3)+2];
-                }
-        
+    Lap[] regiPakli = pakli.clone();
+    for (int i = 0; i < 7; i++) {
+        pakli[i]=regiPakli[20-i*3];
+        pakli[i+7]=regiPakli[19-i*3];
+        pakli[i+14]=regiPakli[18-i*3];
     }
+}
 
-    private void kev2() {
-        for (int i = 2; i < 7; i++) {
-            pakli[i]=pakli[(19-(i-1)*3)+2];
-            pakli[i+7]=pakli[(20-(i-1)*3)+2];
-            pakli[i+14]=pakli[(21-(i-1)*3)+2];
-            }
+private void kev2() {
+    Lap[] regiPakli = pakli.clone();
+    for (int i = 0; i < 7; i++) {
+        pakli[i]=regiPakli[19-i*3];
+        pakli[i+7]= regiPakli[20-i*3];
+        pakli[i+14]= regiPakli[18-i*3];
     }
+}
 
-    private void kev3() {
-        for (int i = 2; i < 7; i++) {
-            pakli[i]=pakli[(20-(i-1)*3)+2];
-            pakli[i+7]=pakli[(21-(i-1)*3)+2];
-            pakli[i+14]=pakli[(19-(i-1)*3)+2];
-            
-        }
+private void kev3() {
+    Lap[] regiPakli = pakli.clone();
+    for (int i = 0; i < 7; i++) {
+        pakli[i]=regiPakli[20-i*3];
+        pakli[i+7]=regiPakli[18-i*3];
+        pakli[i+14]=regiPakli[19-i*3];
     }
+}
+    
     
 
     public Lap[] feltolt(){
         String[] ertek ={"asz","kir","fel","x","Ix","VIII"};   
-        String[] szin ={"T","Z","P","O"}; 
+        String[] szin ={"T_","Z_","P_","O_"}; 
         int number=0;
         for (String szinek:szin){
             for(String ertekek:ertek){
@@ -65,7 +67,7 @@ public class KartyaPakli {
     }
     
     public void ezVolt(){
-        System.out.println("A " + pakli[11] + " lapott válsztottad");
+        System.out.println("A " + pakli[11].getSzin()+pakli[11].getErtek() + " lapott válsztottad");
     }
     
     
