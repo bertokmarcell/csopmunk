@@ -75,4 +75,5 @@ public class KartyaPakli {
         System.out.println("A " + pakli[11] + " lapott válsztottad");
     }
     
+    
 }

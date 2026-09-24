@@ -19,12 +19,12 @@ public class Prog {
     private static void kirak() {
         int szamlalo=0;
         for (int i = 1; i < 4; i++) {
-            System.out.print("  "+1+"  ");
+            System.out.print("  "+i+"  ");
         }
         System.out.println("");
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 3; j++) {
-                System.out.print(KartyaPakli.pakli[szamlalo]+"  |  ");
+                System.out.print(KartyaPakli.pakli[szamlalo].getSzin()+KartyaPakli.pakli[szamlalo].getErtek()+"  |  ");
                 szamlalo++;
             }
             System.out.println("");
